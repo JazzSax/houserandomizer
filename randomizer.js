@@ -1,10 +1,11 @@
 // Create video element
 
 const button = document.getElementById("pickHouse");
-const numStud = 250;
 const video = document.getElementById("vid");
+const numStud = 250;
 
-video.src = "vids/shuffle_houses.mp4";
+
+
 video.controls=false;
 video.autoplay = true;
 video.loop=true;
@@ -19,16 +20,17 @@ let numbers = []
 function randomize(){
     let number;
     do{
-        
         button.disabled=true;
         number = Math.floor(Math.random() * 240)+1;
         let count = 0
         if(!numbers.includes(number)){
             video.muted = false;
             video.loop = false;
-            video.src = "vids/shuffle_houses.mp4"
+            video.src = "vids/shuffle_houses.mp4";
+            
             numbers.push(number);
-            console.log(numbers);   
+            console.log(numbers); 
+            localStorage.setItem('generatedNumbers', JSON.stringify(numbers));  
             video.onended = function(){
                 if(count != 1){
                     if (number <= (numStud * .25)){
@@ -57,7 +59,13 @@ function randomize(){
     } while(numbers.includes(number));
    
 }
-     
+
+var storedNumbers = localStorage.getItem('generatedNumbers');
+if (storedNumbers) {
+  numbers = JSON.parse(storedNumbers);
+  console.log(numbers);
+
+}
 
 button.addEventListener("click", randomize)
 
