@@ -1,9 +1,11 @@
+
 body {
-    margin-top: 17vh;
+    height:100vh;
     padding: 0;
     background: url("Randomizer-layout.png");
     background-repeat: no-repeat;
     background-size:cover;
+    background-position: center;
     overflow: hidden;
   }
   
@@ -220,6 +222,9 @@ body {
     }
   }
 #video-container {
+    position:absolute;
+    top:250px;
+    left:960px;
     width: 650px; 
     height: 650px; 
     overflow: hidden;
@@ -227,10 +232,14 @@ body {
     border-radius: 50%;
     background-color: black;
     margin-bottom: 10vh;
-
-    
-    
+  
    
+}
+.bottom{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 #video-container #vid {
