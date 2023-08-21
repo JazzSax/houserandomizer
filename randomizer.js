@@ -26,7 +26,7 @@ function randomize(){
         if(!numbers.includes(number)){
             video.muted = false;
             video.loop = false;
-            video.src = "vids/shuffle_houses.mp4";
+            video.src = "vids/shuffle_houses_w_sounds.mp4";
             
             numbers.push(number);
             console.log(numbers); 
