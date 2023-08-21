@@ -1,7 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    background: #000000;
+	background: url("Randomizer-layout.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
     overflow: hidden;
   }
   
