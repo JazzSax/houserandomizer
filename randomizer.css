@@ -8,7 +8,7 @@ body {
     background-position: center;
     overflow: hidden;
   }
-  
+
   
   .pyro > .before, .pyro > .after {
     position: absolute;
@@ -249,6 +249,7 @@ body {
 
 }
 
+
 .center {
 
     display: flex;
@@ -258,6 +259,9 @@ body {
 
 }
 
+#pickHouse{
+  display:none;
+}
 
 .btn {
     box-sizing: border-box;
@@ -297,3 +301,58 @@ body {
   .third:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
   }
+
+  #show-outputs{
+    position: fixed;
+    top:200px;
+    left:100px;
+}
+
+#show-outputs2{
+    position: fixed;
+    top:200px;
+    right:100px;
+ 
+}
+
+ul {
+  list-style-type: none;
+  
+}
+
+
+li, .shuffle{
+
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Harry Potter', sans-serif;
+    color: PaleGoldenRod;
+    margin-bottom: 8rem;
+    outline: none;
+    text-align: center;
+
+  -webkit-text-stroke-color: black;
+
+      
+}
+
+
+.shuffle.completed {
+  animation: blink 2s linear 0s 1 alternate;
+}
+
+@keyframes blink {
+  0% {
+    color: #fff;
+    text-shadow: 0 0 1rem #fff;
+  }
+}
+#chronos, #cyber, #inno, #senti {
+  font-size:100px;
+  margin-top:15rem;
+  display:none;
+  
+  text-shadow: 5px 5px 5px #6495ED;;
+ 
+  
+}
